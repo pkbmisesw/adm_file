@@ -68,6 +68,19 @@
                     </li>
                 </ul>
             </li>
+
+            <li>
+                <a href="#">Other</a>
+
+                <ul>
+                    <li>
+                        <a href="../../logout.php">
+                            <i class="fa fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
     <!-- Sidebar Navigation End -->
