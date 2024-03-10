@@ -4,7 +4,7 @@
     <div class="sidebar--profile">
         <div class="profile--img">
             <a href="profile.html">
-                <img src="../../assets/img/avatars/01_80x80.png" alt="" class="rounded-circle">
+                <img src="../../assets/img/avatars/avatar.png" alt="" class="rounded-circle">
             </a>
         </div>
 
@@ -45,12 +45,24 @@
                     <li>
                         <a href="#">
                             <i class="fa fa-th"></i>
-                            <span>File</span>
+                            <span>Master File</span>
                         </a>
 
                         <ul>
                             <li><a href="../m_kat_file/">Master Kategori File</a></li>
-                            <li><a href="../m_file/">Master File</a></li>
+                            <li><a href="../m_file/">Master File All</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span>Master File Period</span>
+                        </a>
+
+                        <ul>
+                            <li><a href="../m_kat_file/">Master Kategori File</a></li>
+                            <li><a href="../m_file/">Master File All</a></li>
                         </ul>
                     </li>
                 </ul>

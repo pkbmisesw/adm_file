@@ -81,7 +81,7 @@
             <!-- Nav User Start -->
             <li class="nav-item dropdown nav--user online">
                 <a href="#" class="nav-link" data-toggle="dropdown">
-                    <img src="../../assets/img/avatars/01_80x80.png" alt="" class="rounded-circle">
+                    <img src="../../assets/img/avatars/avatar.png" alt="" class="rounded-circle">
                     <span><?php echo $_SESSION['nama']; ?></span>
                     <i class="fa fa-angle-down"></i>
                 </a>

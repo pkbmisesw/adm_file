@@ -47,25 +47,6 @@ include "../head.php";
                         </ul>
                     </div>
 
-                    <div class="col-lg-6">
-                        <!-- Summary Widget Start -->
-                        <div class="summary--widget">
-                            <div class="summary--item">
-                                <p class="summary--chart" data-trigger="sparkline" data-type="bar" data-width="5" data-height="38" data-color="#009378">2,9,7,9,11,9,7,5,7,7,9,11</p>
-
-                                <p class="summary--title">This Month</p>
-                                <p class="summary--stats text-green">2,371,527</p>
-                            </div>
-
-                            <div class="summary--item">
-                                <p class="summary--chart" data-trigger="sparkline" data-type="bar" data-width="5" data-height="38" data-color="#e16123">2,3,7,7,9,11,9,7,9,11,9,7</p>
-
-                                <p class="summary--title">Last Month</p>
-                                <p class="summary--stats text-orange">2,527,371</p>
-                            </div>
-                        </div>
-                        <!-- Summary Widget End -->
-                    </div>
                 </div>
             </div>
         </section>
@@ -100,7 +81,9 @@ include "../head.php";
                             <th>Kategori</th>
                             <th>Nama</th>
                             <th>Deskripsi</th>
+                            <th>Url</th>
                             <th>Status</th>
+                            <th>Created At</th>
                             <th class="not-sortable">Aksi</th>
                         </tr>
                         </thead>
@@ -117,13 +100,17 @@ include "../head.php";
                             <td><?php echo $data['nama_kategori'] ?></td>
                             <td><?php echo $data['nama'] ?></td>
                             <td><?php echo $data['des'] ?></td>
+                            <td><a href="<?php echo $data['url'] ?>">Lihat</a></td>
                             <td><?php echo $data['status'] ?></td>
+                            <td><?php echo $data['created_at'] ?></td>
                             <td>
                                 <button
                                         data-id="<?= $data['id'] ?>"
                                         data-nama="<?= $data['nama']?>"
                                         data-des="<?= $data['des']?>"
+                                        data-url="<?= $data['url']?>"
                                         data-status="<?= $data['status']?>"
+                                        data-created_at="<?= $data['created_at']?>"
                                         data-kategori_id="<?= $data['id_kat']?>"
                                         type="button" class="btn btn-success btn_update" href="#edit" data-toggle="modal"><i class="fa fa-edit"></i></button>
                                 <a class="btn btn-danger" href="../../controller/<?php echo $dba;?>_controller.php?op=hapus&id=<?php echo $data['id'] ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');">X</a>
@@ -182,8 +169,18 @@ include "../head.php";
                     </div>
 
                     <div class="form-group">
+                        <label class="label-text" >URL : </label>
+                        <input type="text" class="form-control" name="url" placeholder="Silahkan Mengisi URL" required/>
+                    </div>
+
+                    <div class="form-group">
                         <label class="label-text" >Status : </label>
                         <input type="text" class="form-control" name="status" placeholder="Silahkan Mengisi Deskripsi" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label-text" >Created At : </label>
+                        <input type="datetime-local" class="form-control" name="created_at" placeholder="Silahkan Mengisi Created At" required/>
                     </div>
                 </form>
             </div>
@@ -236,8 +233,18 @@ include "../head.php";
                         </div>
 
                         <div class="form-group">
+                            <label class="label-text" >URL : </label>
+                            <input type="text" class="form-control" id="url_edit" name="url" />
+                        </div>
+
+                        <div class="form-group">
                             <label class="label-text" >Status : </label>
                             <input type="text" class="form-control" id="status_edit" name="status" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label-text" >Created At : </label>
+                            <input type="datetime-local" class="form-control" id="created_at_edit" name="created_at" />
                         </div>
                 </form>
             </div>
@@ -295,7 +302,9 @@ include "../head.php";
             $("#id_edit").val($(this).attr('data-id'))
             $("#nama_edit").val($(this).attr('data-nama'));
             $("#des_edit").val($(this).attr('data-des'));
+            $("#url_edit").val($(this).attr('data-url'));
             $("#status_edit").val($(this).attr('data-status'));
+            $("#created_at_edit").val($(this).attr('data-created_at'));
             $('#edit').modal('show');
         });
 

@@ -8,20 +8,26 @@ if($op == "tambah"){
     $id_kat = $_POST['id_kat'];
     $nama = $_POST['nama'];
     $des = $_POST['des'];
+    $url = $_POST['url'];
     $status = $_POST['status'];
+    $created_at = $_POST['created_at'];
 
     try {
         $sql = "INSERT INTO m_file SET
                 id_kat = :id_kat,
                 nama = :nama,
                 des = :des,
-                status = :status";
+                url = :url,
+                status = :status,
+                created_at = :created_at";
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id_kat', $id_kat);
         $stmt->bindParam(':nama', $nama);
         $stmt->bindParam(':des', $des);
+        $stmt->bindParam(':url', $url);
         $stmt->bindParam(':status', $status);
+        $stmt->bindParam(':created_at', $created_at);
         $stmt->execute();
     }
     catch(PDOException $e) {

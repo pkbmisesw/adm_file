@@ -98,7 +98,7 @@ if(isset($_POST['login'])) {
             <div class="row no-gutters">
                 <div class="col-md-6">
                     <!-- Login Content Start -->
-                    <div class="m-account--content-w" data-bg-img="assets/img/account/content-bg.jpg">
+                    <div class="m-account--content-w" data-bg-img="assets/img/bg-image.png">
                         <div class="m-account--content">
                             <h2 class="h2">Don't have an account?</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
