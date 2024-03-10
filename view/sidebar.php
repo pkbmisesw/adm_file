@@ -61,8 +61,9 @@
                         </a>
 
                         <ul>
-                            <li><a href="../m_kat_file/">Master Kategori File</a></li>
-                            <li><a href="../m_file/">Master File All</a></li>
+                            <li><a href="../m_file/view_bulan.php?month=1">Master File Bulan</a></li>
+                            <li><a href="../m_file/view_tahun.php?year=<?php echo date("Y"); ?>">Master File Tahun</a></li>
+                            <li><a href="../m_file/view_periode.php?from=<?php echo date("Y-m-d", strtotime("-1 year", strtotime(date("Y-m-d")))); ?>&to=<?php echo date("Y-m-d"); ?>">Master File Periode</a></li>
                         </ul>
                     </li>
                 </ul>
